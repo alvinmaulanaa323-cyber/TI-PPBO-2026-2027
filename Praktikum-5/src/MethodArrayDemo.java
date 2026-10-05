@@ -1,27 +1,57 @@
 public class MethodArrayDemo {
-static double hitungRataRata ( int [] data ) {
+
+    // Method menerima array sebagai parameter
+    static double hitungRataRata(int[] data) {
         int total = 0;
-        for ( int nilai : data ) {
-            total += nilai ;
-            }
-        return ( double ) total / data . length ;
+
+        for (int nilai : data) {
+            total += nilai;
         }
 
-        static int cariMaksimum ( int [] data ) {
-        int max = data [ 0];
-        for ( int nilai : data ) {
-            if ( nilai > max) {
-                max = nilai ;
+        return (double) total / data.length;
+    }
+
+    // Method menerima array dan mencari nilai maksimum
+    static int cariMaksimum(int[] data) {
+        int max = data[0];
+
+        for (int nilai : data) {
+            if (nilai > max) {
+                max = nilai;
+            }
+        }
+
+        return max;
+    }
+    // Method mengembalikan array baru yang sudah diurutkan
+    static int[] urutkanAscending(int[] data) {
+        int[] hasil = data.clone();
+
+        for (int i = 0; i < hasil.length - 1; i++) {
+            for (int j = 0; j < hasil.length - 1 - i; j++) {
+                if (hasil[j] > hasil[j + 1]) {
+                    int temp = hasil[j];
+                    hasil[j] = hasil[j + 1];
+                    hasil[j + 1] = temp;
                 }
             }
-        return max;
         }
 
-        public static void main ( String [] args ) {
-        int [] nilaiUjian = { 80 , 75 , 90 , 60 , 88 };
+        return hasil;
+    }
 
-        System . out . println ( "Rata - rata: " +
-                hitungRataRata ( nilaiUjian ));
-        System . out . println ( "Maksimum: " + cariMaksimum ( nilaiUjian ));
+    public static void main(String[] args) {
+        int[] nilaiUjian = {80, 75, 90, 60, 88};
+
+        System.out.println("Rata-rata: " + hitungRataRata(nilaiUjian));
+        System.out.println("Maksimum: " + cariMaksimum(nilaiUjian));
+
+        int[] terurut = urutkanAscending(nilaiUjian);
+
+        System.out.print("Setelah diurutkan: ");
+
+        for (int n : terurut) {
+            System.out.print(n + " ");
         }
- }
+    }
+}
