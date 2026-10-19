@@ -4,10 +4,14 @@ public class Latihanclass {
 
         m1.nama="Alvin";
         m1.nim="2025573010003";
-        m1.ipk=3.50;
+        m1.ipk=3.55;
 
-        System.out.println("nama:" + m1.nama);
-        System.out.println("nim:" + m1.nim);
-        System.out.println("ipk:" + m1.ipk);
+        Mahasiswa m2 =new Mahasiswa();
+        m2.nama="Revan";
+        m2.nim="2025573010082";
+        m2.ipk=3.63;
+
+        System.out.println(m1.nama+"-" + m1.ipk);
+        System.out.println(m2.nama+"-" + m2.ipk);
     }
 }
