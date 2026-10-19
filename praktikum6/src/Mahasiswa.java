@@ -10,9 +10,9 @@ public class Mahasiswa {
         ipk = 0.0;
     }
     public Mahasiswa(String namaAwal, String nimAwal, double ipkAwal){
-        nama=namaAwal;
-        nim=nimAwal;
-        ipk=ipkAwal;
+        this.nama=namaAwal;
+        this.nim=nimAwal;
+        this.ipk=ipkAwal;
 
         }
     }
