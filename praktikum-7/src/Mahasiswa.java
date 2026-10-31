@@ -23,6 +23,15 @@ public class Mahasiswa {
         return ipk;
     }
 
+    // Setter dengan validasi
+    public void setIpk(double ipk) {
+        if (ipk >= 0.0 && ipk <= 4.0) {
+            this.ipk = ipk;
+        } else {
+            System.out.println("IPK tidak valid, harus 0.0 - 4.0");
+        }
+    }
+
     public void tampilkanData() {
         System.out.println("Nama: " + nama);
         System.out.println("NIM : " + nim);
