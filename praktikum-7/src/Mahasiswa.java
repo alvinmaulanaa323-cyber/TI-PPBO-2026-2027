@@ -10,6 +10,19 @@ public class Mahasiswa {
         this.ipk = ipk;
     }
 
+    // Getter
+    public String getNama() {
+        return nama;
+    }
+
+    public String getNim() {
+        return nim;
+    }
+
+    public double getIpk() {
+        return ipk;
+    }
+
     public void tampilkanData() {
         System.out.println("Nama: " + nama);
         System.out.println("NIM : " + nim);
