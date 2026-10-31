@@ -14,5 +14,6 @@ public class Latihanclass {
         // Menguji setter dengan nilai tidak valid
         m1.setIpk(9.9);
         System.out.println("IPK sekarang: " + m1.getIpk());
+
     }
 }
