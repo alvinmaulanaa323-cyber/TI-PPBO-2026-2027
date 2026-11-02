@@ -3,9 +3,12 @@ public class Manager extends Pegawai {
 
     public Manager(String nama, String nip, double gajiPokok,
                    double tunjanganJabatan) {
-
         super(nama, nip, gajiPokok);
         this.tunjanganJabatan = tunjanganJabatan;
+    }
+
+    public double getTunjanganJabatan() {
+        return tunjanganJabatan;
     }
 
     public void tampilkanRingkasan() {
