@@ -1,24 +1,13 @@
- public class KebunBinatangDemo {
-     public static void main(String[] args) {
-         Hewan h1 = new Kucing("Milo");
-         Hewan h2 = new Anjing("Rex");
+public class KebunBinatangDemo {
+    public static void main(String[] args) {
+        Hewan[] daftarHewan = {
+                new Kucing("Milo"),
+                new Anjing("Rex"),
+                new Bebek("Donald")
+        };
 
-         h1.bersuara();
-         h2.bersuara();
-
-         System.out.println();
-
-         Hewan[] daftarhewan = {
-                 new Kucing("Milo"),
-                 new Anjing("Rex"),
-                 new Kucing("Oyen")
-         };
-
-         for (Hewan h : daftarhewan) {
-             h.bersuara();
-         }
-
-     }
-
- }
-
+        for (Hewan h : daftarHewan) {
+            h.bersuara();
+        }
+    }
+}
